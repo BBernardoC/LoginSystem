@@ -5,7 +5,7 @@ Desafio CSLR WGA
 Como executar:
 
 1. Certifique-se de que você tenha as bibliotecas Flask e Flask-MySQLdb instaladas 
-"(pip install flask,pip install flask-mysqldb)"
+"(pip install flask, pip install flask-mysqldb)"
 
 2. No MySQL workbench execute o arquivo desafio.sql 
 
