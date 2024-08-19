@@ -1,0 +1,296 @@
+/* Aplica o modelo de caixa 'border-box' a todos os elementos para incluir padding e borda no cálculo da largura e altura */
+* {
+    box-sizing: border-box;
+    /* Define a fonte padrão com uma lista de fontes alternativas */
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    /* Define o tamanho da fonte padrão para 16px */
+    font-size: 16px;
+    /* Melhora a renderização de fontes em sistemas WebKit */
+    -webkit-font-smoothing: antialiased;
+    /* Melhora a renderização de fontes em sistemas macOS */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Define o estilo geral do corpo da página */
+body {
+    /* Define a cor de fundo do corpo da página */
+    background-color: #435165;
+    /* Remove as margens padrão do corpo */
+    margin: 0;
+}
+
+/* Estilos para os contêineres de login e registro */
+.login, .register {
+    /* Define a largura dos contêineres */
+    width: 400px;
+    /* Define a cor de fundo */
+    background-color: #ffffff;
+    /* Adiciona uma sombra ao redor do contêiner */
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    /* Centraliza o contêiner horizontalmente e define a margem superior */
+    margin: 100px auto;
+}
+
+/* Estilos para os cabeçalhos dentro dos contêineres de login e registro */
+.login h1, .register h1 {
+    /* Centraliza o texto */
+    text-align: center;
+    /* Define a cor do texto */
+    color: #5b6574;
+    /* Define o tamanho da fonte */
+    font-size: 24px;
+    /* Adiciona espaçamento interno */
+    padding: 20px 0;
+    /* Adiciona uma borda inferior */
+    border-bottom: 1px solid #dee0e4;
+}
+
+/* Estilos para os links dentro dos contêineres de login e registro */
+.login .links, .register .links {
+    /* Define o layout flexível para os links */
+    display: flex;
+    /* Adiciona padding horizontal */
+    padding: 0 15px;
+}
+
+/* Estilos para os links de navegação */
+.login .links a, .register .links a {
+    /* Define a cor dos links */
+    color: #adb2ba;
+    /* Remove o sublinhado dos links */
+    text-decoration: none;
+    /* Define o layout flexível para os links */
+    display: inline-flex;
+    /* Adiciona padding */
+    padding: 0 10px 10px 10px;
+    /* Define o texto em negrito */
+    font-weight: bold;
+}
+
+/* Estilos para links ao passar o mouse */
+.login .links a:hover, .register .links a:hover {
+    /* Altera a cor dos links ao passar o mouse */
+    color: #9da3ac;
+}
+
+/* Estilos para o link ativo */
+.login .links a.active, .register .links a.active {
+    /* Adiciona uma borda inferior para o link ativo */
+    border-bottom: 3px solid #3274d6;
+    /* Altera a cor do texto do link ativo */
+    color: #3274d6;
+}
+
+/* Estilos para os formulários de login e registro */
+.login form, .register form {
+    /* Define o layout flexível para o formulário */
+    display: flex;
+    /* Permite que o formulário se quebre em várias linhas se necessário */
+    flex-wrap: wrap;
+    /* Alinha os itens no centro */
+    justify-content: center;
+    /* Adiciona padding superior */
+    padding-top: 20px;
+}
+
+/* Estilos para os rótulos dos campos do formulário */
+.login form label, .register form label {
+    /* Define o layout flexível para os rótulos */
+    display: flex;
+    /* Alinha o conteúdo ao centro */
+    justify-content: center;
+    align-items: center;
+    /* Define o tamanho dos rótulos */
+    width: 50px;
+    height: 50px;
+    /* Define a cor de fundo dos rótulos */
+    background-color: #3274d6;
+    /* Define a cor do texto dos rótulos */
+    color: #ffffff;
+}
+
+/* Estilos para os campos de entrada de texto */
+.login form input[type="password"], .login form input[type="text"], .login form input[type="email"], .register form input[type="password"], .register form input[type="text"], .register form input[type="genero"] {
+    /* Define a largura e altura dos campos de entrada */
+    width: 310px;
+    height: 50px;
+    /* Adiciona uma borda aos campos */
+    border: 1px solid #dee0e4;
+    /* Adiciona margens inferiores */
+    margin-bottom: 20px;
+    /* Adiciona padding interno */
+    padding: 0 15px;
+}
+
+/* Estilos para o botão de envio do formulário */
+.login form input[type="submit"], .register form input[type="submit"] {
+    /* Define a largura total do botão */
+    width: 100%;
+    /* Adiciona padding interno ao botão */
+    padding: 15px;
+    /* Adiciona margem superior */
+    margin-top: 20px;
+    /* Define a cor de fundo do botão */
+    background-color: #3274d6;
+    /* Remove a borda padrão do botão */
+    border: 0;
+    /* Altera o cursor para pointer ao passar sobre o botão */
+    cursor: pointer;
+    /* Define o texto em negrito */
+    font-weight: bold;
+    /* Define a cor do texto do botão */
+    color: #ffffff;
+    /* Adiciona uma transição para a cor de fundo */
+    transition: background-color 0.2s;
+}
+
+/* Estilos para o botão de envio ao passar o mouse */
+.login form input[type="submit"]:hover, .register form input[type="submit"]:hover {
+    /* Altera a cor de fundo do botão ao passar o mouse */
+    background-color: #2868c7;
+    /* Mantém a transição para a cor de fundo */
+    transition: background-color 0.2s;
+}
+
+/* Estilos para a barra de navegação superior */
+.navtop {
+    /* Define a cor de fundo da barra de navegação */
+    background-color: #2f3947;
+    /* Define a altura da barra de navegação */
+    height: 60px;
+    /* Define a largura da barra de navegação */
+    width: 100%;
+    /* Remove a borda padrão */
+    border: 0;
+}
+
+/* Estilos para o contêiner dentro da barra de navegação */
+.navtop div {
+    /* Define o layout flexível */
+    display: flex;
+    /* Centraliza o contêiner horizontalmente */
+    margin: 0 auto;
+    /* Define a largura do contêiner */
+    width: 1000px;
+    /* Define a altura do contêiner */
+    height: 100%;
+}
+
+/* Estilos para o título e links dentro do contêiner da barra de navegação */
+.navtop div h1, .navtop div a {
+    /* Define o layout flexível para o título e links */
+    display: inline-flex;
+    /* Alinha os itens ao centro */
+    align-items: center;
+}
+
+/* Estilos para o título dentro do contêiner da barra de navegação */
+.navtop div h1 {
+    /* Faz com que o título ocupe o máximo de espaço disponível */
+    flex: 1;
+    /* Define o tamanho da fonte do título */
+    font-size: 24px;
+    /* Remove padding e margens */
+    padding: 0;
+    margin: 0;
+    /* Define a cor do texto do título */
+    color: #eaebed;
+    /* Define o peso da fonte */
+    font-weight: normal;
+}
+
+/* Estilos para os links dentro do contêiner da barra de navegação */
+.navtop div a {
+    /* Adiciona padding aos links */
+    padding: 0 20px;
+    /* Remove o sublinhado dos links */
+    text-decoration: none;
+    /* Define a cor dos links */
+    color: #c1c4c8;
+    /* Define o texto em negrito */
+    font-weight: bold;
+}
+
+/* Estilos para os ícones dentro dos links da barra de navegação */
+.navtop div a i {
+    /* Adiciona padding ao ícone */
+    padding: 2px 8px 0 0;
+}
+
+/* Estilos para os links ao passar o mouse */
+.navtop div a:hover {
+    /* Altera a cor dos links ao passar o mouse */
+    color: #eaebed;
+}
+
+/* Estilos para o corpo da página quando o usuário está logado */
+body.loggedin {
+    /* Define a cor de fundo para a página quando o usuário está logado */
+    background-color: #f3f4f7;
+}
+
+/* Estilos para o contêiner de conteúdo principal */
+.content {
+    /* Define a largura do contêiner de conteúdo */
+    width: 1000px;
+    /* Centraliza o contêiner horizontalmente */
+    margin: 0 auto;
+}
+
+/* Estilos para o cabeçalho dentro do contêiner de conteúdo */
+.content h2 {
+    /* Remove margens padrão */
+    margin: 0;
+    /* Adiciona padding superior e inferior */
+    padding: 25px 0;
+    /* Define o tamanho da fonte */
+    font-size: 22px;
+    /* Adiciona uma borda inferior */
+    border-bottom: 1px solid #e0e0e3;
+    /* Define a cor do texto */
+    color: #4a536e;
+}
+
+/* Estilos para parágrafos e divs dentro do contêiner de conteúdo */
+.content > p, .content > div {
+    /* Adiciona uma sombra ao redor do elemento */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    /* Adiciona margens superior e inferior */
+    margin: 25px 0;
+    /* Adiciona padding interno */
+    padding: 25px;
+    /* Define a cor de fundo */
+    background-color: #fff;
+}
+
+/* Estilos para células de tabela dentro de parágrafos e divs no contêiner de conteúdo */
+.content > p table td, .content > div table td {
+    /* Adiciona padding às células da tabela */
+    padding: 5px;
+}
+
+/* Estilos para a primeira célula em cada linha da tabela dentro de parágrafos e divs no contêiner de conteúdo */
+.content > p table td:first-child, .content > div table td:first-child {
+    /* Define o texto em negrito */
+    font-weight: bold;
+    /* Define a cor do texto */
+    color: #4a536e;
+    /* Adiciona padding direito */
+    padding-right: 15px;
+}
+
+/* Estilos para parágrafos dentro de divs no contêiner de conteúdo */
+.content > div p {
+    /* Adiciona padding */
+    padding: 5px;
+    /* Remove a margem inferior padrão */
+    margin: 0 0 10px 0;
+}
+
+/* Estilos para o contêiner de pronomes */
+#pronomes-container {
+    /* Oculta o contêiner por padrão */
+    display: none;
+    /* Adiciona margem superior */
+    margin-top: 10px;
+}
