@@ -14,7 +14,7 @@ Como executar:
 4. No arquivo app.py, configure a conexão com o banco de dados inserindo nessas linhas:
 "app.config['MYSQL_HOST'] = 'localhost' "- seu hostname
 "app.config['MYSQL_USER'] = 'root'  "- seu nome de usuário
-"app.config['MYSQL_PASSWORD'] = '' "- sua senha para conexão
+"app.config['MYSQL_PASSWORD'] = ' ' "- sua senha para conexão
 
 
 5. Com o MySQL e Python configurado, no terminal/prompt utilize o comando "flask run"
