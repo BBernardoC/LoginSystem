@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registro</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+        <!-- Script para mostrar ou esconder o campo de pronomes com base na seleção do gênero -->
+        <script>
+            function mostrarCampoPronomes() {
+                const generoSelect = document.getElementById('genero'); 
+                const pronomesContainer = document.getElementById('pronomes-container');
+
+                // Se o valor selecionado for "outro", exibe o campo de pronomes; caso contrário, oculta
+                if (generoSelect.value === 'outro') {
+                    pronomesContainer.style.display = 'block';
+                } else {
+                    pronomesContainer.style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="register">
+            <h1>Registro</h1>
+            <!-- Links de navegação entre login e registro -->
+            <div class="links">
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}" class="active">Registro</a>
+            </div>
+            <!-- Formulário de registro -->
+            <form action="{{ url_for('register') }}" method="post" autocomplete="off">
+                <label for="username">
+                    <i class="fas fa-user"></i> 
+                </label>
+                <input type="text" name="username" placeholder="Usuário" id="username" required>
+
+                <label for="password">
+                    <i class="fas fa-lock"></i> 
+                </label>
+                <input type="password" name="password" placeholder="Senha" id="password" required>
+                
+                <!-- Menu suspenso para seleção do gênero -->
+                <select id="genero" name="genero" onchange="mostrarCampoPronomes()">
+                    <option value="">Selecione...</option>
+                    <option value="masculino">Masculino (Ele/Dele)</option>
+                    <option value="feminino">Feminino (Ela/Dela)</option>
+                    <option value="desconhecido">Prefiro não dizer</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <!-- Contêiner para o campo de pronomes, inicialmente oculto -->
+                <div id="pronomes-container">
+                    <input type="text" id="pronomes" name="pronomes" placeholder="Digite seus pronomes: (Ex: Elu/Delu)">
+                </div>
+                
+                <div class="msg">{{ msg }}</div>
+
+                <input type="submit" value="Registrar">
+                
+            </form>
+        </div>
+    </body>
+</html>
