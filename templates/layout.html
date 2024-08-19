@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+        <meta charset="utf-8">
+        <!-- Título da página. O título será substituído por um bloco de conteúdo definido em outros arquivos HTML que herdam este template -->
+        <title>{% block title %}{% endblock %}</title>
+        <!-- Link para o arquivo CSS externo com estilo personalizado -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <!-- Link para o Font Awesome, uma biblioteca de ícones -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body class="loggedin">
+        <!-- Barra de navegação no topo da página -->
+        <nav class="navtop">
+            <div>
+                <!-- Cabeçalho da página -->
+                <h1>Desafio CSLR WGA</h1>
+                <!-- Link para logout, com um ícone de saída -->
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </nav>
+        <!-- Div para o conteúdo principal da página. O conteúdo será inserido aqui por blocos definidos em arquivos HTML que herdam este template -->
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

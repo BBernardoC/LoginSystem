@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+<!-- O template estende o arquivo 'layout.html', que provavelmente contém a estrutura básica da página, como cabeçalho, rodapé e outros elementos comuns. -->
+
+{% block title %}Home{% endblock %}
+
+<!-- Define o conteúdo do bloco 'title', que substituirá o bloco correspondente no template pai ('layout.html'). Neste caso, o título da página será "Home". -->
+
+{% block content %}
+
+<!-- Define o conteúdo do bloco 'content', que substituirá o bloco correspondente no template pai ('layout.html'). -->
+
+<h2>Suas informações</h2>
+
+<div>
+    <table>
+        <!-- Tabela para exibir informações do usuário -->
+        <tr>
+            <td>Usuário:</td>
+            <td>{{ account['username'] }}</td>
+        </tr>
+        <tr>
+            <td>Genero:</td>
+            <td>{{ account['genero'] }}</td>
+        </tr>
+        <tr>
+            <td>Pronomes:</td>
+            <td>{{ account['pronomes'] }}</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
+
